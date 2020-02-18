@@ -30,18 +30,23 @@ $Button2.Location=New-Object System.Drawing.Size(100,50)
 $form.Controls.Add($Button2)
 $button2.add_Click{
 $Form = New-Object System.Windows.Forms.Form
-$Label = New-Object System.Windows.Forms.Label
-$Label.Text = "Formulario para poder poner rutinas"
-$Label.AutoSize = $True
+$Label=New-Object System.Windows.Forms.Label
+$Label.Text="Objetivos de asesoria"
+$Label.AutoSize=$True
+$Label.Location=New-Object System.Drawing.Size(80,80)
+$TextBox = New-Object System.Windows.Forms.TextBox
+$TextBox.Location = New-Object System.Drawing.Size(70,100)
+$TextBox.Size = New-Object System.Drawing.Size(150,20)
 $Button3=New-Object System.Windows.Forms.Button
 $Button3.Size=New-Object System.Drawing.Size(70,25)
-$Button3.Text="Cerrar"
-$Button3.Location=New-Object System.Drawing.Size(100,100)
+$Button3.Text="Enviar"
+$Button3.Location=New-Object System.Drawing.Size(100,130)
 $Form.Controls.Add($Button3)
 $button3.add_Click{
  $form.Close()
 }
 $Form.Controls.Add($Label)
+$Form.Controls.Add($TextBox)
 $Form.ShowDialog()
 }
 
