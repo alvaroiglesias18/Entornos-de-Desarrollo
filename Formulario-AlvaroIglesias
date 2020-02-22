@@ -6,151 +6,271 @@ using namespace System.Windows.Forms
 $Form = New-Object System.Windows.Forms.Form
 $Font = New-Object System.Drawing.Font("Segoe UI",12,[System.Drawing.FontStyle]::Italic)
 $Form.Font = $Font
-$Label = New-Object System.Windows.Forms.Label
-$Label.Text = "Formulario principal"
-$Label.AutoSize = $True
-$Form.Controls.Add($Label)
-$Form.Text = "Formulario 1"
 
-#Boton numero 1#
-$Button=New-Object System.Windows.Forms.Button
-$Button.Size=New-Object System.Drawing.Size(70,25)
-$Button.Text="Botón"
-$Button.Location=New-Object System.Drawing.Size(0,50)
-$form.Controls.Add($Button)
-$button.add_Click{
- $Form2.ShowDialog()
-}
+$Form                            = New-Object system.Windows.Forms.Form
+$Form.ClientSize                 = '400,400'
+$Form.text                       = "Form"
+$Form.TopMost                    = $false
 
-#Boton numero 2#
-$Button2=New-Object System.Windows.Forms.Button
-$Button2.Size=New-Object System.Drawing.Size(70,25)
-$Button2.Text="Botón nulo"
-$Button2.Location=New-Object System.Drawing.Size(100,50)
-$form.Controls.Add($Button2)
-$button2.add_Click{
-$Form = New-Object System.Windows.Forms.Form
-$Label=New-Object System.Windows.Forms.Label
-$Label.Text="Objetivos de asesoria"
-$Label.AutoSize=$True
-$Label.Location=New-Object System.Drawing.Size(80,80)
-$TextBox = New-Object System.Windows.Forms.TextBox
-$TextBox.Location = New-Object System.Drawing.Size(70,100)
-$TextBox.Size = New-Object System.Drawing.Size(150,20)
-$Button3=New-Object System.Windows.Forms.Button
-$Button3.Size=New-Object System.Drawing.Size(70,25)
-$Button3.Text="Enviar"
-$Button3.Location=New-Object System.Drawing.Size(100,130)
-$Form.Controls.Add($Button3)
-$button3.add_Click{
+$Label1                          = New-Object system.Windows.Forms.Label
+$Label1.text                     = "Nuestra Página"
+$Label1.AutoSize                 = $true
+$Label1.width                    = 25
+$Label1.height                   = 10
+$Label1.location                 = New-Object System.Drawing.Point(142,50)
+$Label1.Font                     = 'Segoe Print,10,style=Bold,Underline'
+
+$Button1                         = New-Object system.Windows.Forms.Button
+$Button1.text                    = "Tienda"
+$Button1.width                   = 60
+$Button1.height                  = 30
+$Button1.location                = New-Object System.Drawing.Point(160,95)
+$Button1.Font                    = 'Microsoft Sans Serif,10'
+$button1.add_Click{
+
+$Form2                            = New-Object system.Windows.Forms.Form
+$Form2.ClientSize                 = '400,400'
+$Form2.text                       = "Form"
+$Form2.TopMost                    = $false
+
+$Button1                         = New-Object system.Windows.Forms.Button
+$Button1.text                    = "Camisetas"
+$Button1.width                   = 90
+$Button1.height                  = 40
+$Button1.location                = New-Object System.Drawing.Point(88,136)
+$Button1.Font                    = 'Microsoft Sans Serif,10'
+$Button1.add_Click{
+$Form                            = New-Object system.Windows.Forms.Form
+$Form.ClientSize                 = '400,400'
+$Form.text                       = "Form"
+$Form.TopMost                    = $false
+
+$Label1                          = New-Object system.Windows.Forms.Label
+$Label1.text                     = "Material: "
+$Label1.AutoSize                 = $true
+$Label1.width                    = 25
+$Label1.height                   = 10
+$Label1.location                 = New-Object System.Drawing.Point(129,106)
+$Label1.Font                     = 'Microsoft Sans Serif,10'
+
+$Label2                          = New-Object system.Windows.Forms.Label
+$Label2.text                     = "Corte entallado"
+$Label2.AutoSize                 = $true
+$Label2.width                    = 25
+$Label2.height                   = 10
+$Label2.location                 = New-Object System.Drawing.Point(125,134)
+$Label2.Font                     = 'Microsoft Sans Serif,10'
+
+$Label3                          = New-Object system.Windows.Forms.Label
+$Label3.text                     = "    Ligera"
+$Label3.AutoSize                 = $true
+$Label3.width                    = 25
+$Label3.height                   = 10
+$Label3.location                 = New-Object System.Drawing.Point(127,163)
+$Label3.Font                     = 'Microsoft Sans Serif,10'
+
+$Label4                          = New-Object system.Windows.Forms.Label
+$Label4.text                     = "Algondón 100%"
+$Label4.AutoSize                 = $true
+$Label4.width                    = 25
+$Label4.height                   = 10
+$Label4.location                 = New-Object System.Drawing.Point(127,194)
+$Label4.Font                     = 'Microsoft Sans Serif,10'
+
+$Label5                          = New-Object system.Windows.Forms.Label
+$Label5.text                     = "Camisetas"
+$Label5.AutoSize                 = $true
+$Label5.width                    = 25
+$Label5.height                   = 10
+$Label5.location                 = New-Object System.Drawing.Point(142,50)
+$Label5.Font                     = 'Segoe Print,10,style=Bold,Underline'
+
+$Button3                         = New-Object system.Windows.Forms.Button
+$Button3.text                    = "Salir"
+$Button3.width                   = 60
+$Button3.height                  = 30
+$Button3.location                = New-Object System.Drawing.Point(297,305)
+$Button3.Font                    = 'Microsoft Sans Serif,10'
+$Button3.add_Click{
  $form.Close()
 }
-$Form.Controls.Add($Label)
-$Form.Controls.Add($TextBox)
+
+$PictureBox1                     = New-Object system.Windows.Forms.PictureBox
+$PictureBox1.width               = 200
+$PictureBox1.height              = 200
+$PictureBox1.location            = New-Object System.Drawing.Point(90,200)
+$PictureBox1.imageLocation       = "C:\Users\Coke\Desktop\fondos.png"
+$PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
+$Form.controls.AddRange(@($Label1,$Label2,$Label3,$Label4,$PictureBox1,$Button3,$Label5))
 $Form.ShowDialog()
 }
 
-#Boton numero 3#
-$Button3=New-Object System.Windows.Forms.Button
-$Button3.Size=New-Object System.Drawing.Size(70,25)
-$Button3.Text="Botón nulo"
-$Button3.Location=New-Object System.Drawing.Size(190,50)
-$form.Controls.Add($Button3)
-$button3.add_Click{
-$Form = New-Object System.Windows.Forms.Form
-$Label = New-Object System.Windows.Forms.Label
-$Label.Text = "Aun no tiene un uso predeterminado"
-$Label.AutoSize = $True
-$Button3=New-Object System.Windows.Forms.Button
-$Button3.Size=New-Object System.Drawing.Size(70,25)
-$Button3.Text="Cerrar"
-$Button3.Location=New-Object System.Drawing.Size(100,100)
-$Form.Controls.Add($Button3)
-$button3.add_Click{
- $form.Close()
-}
-$Form.Controls.Add($Label)
+$Button2                         = New-Object system.Windows.Forms.Button
+$Button2.text                    = "Sudaderas"
+$Button2.width                   = 90
+$Button2.height                  = 40
+$Button2.location                = New-Object System.Drawing.Point(234,137)
+$Button2.Font                    = 'Microsoft Sans Serif,10'
+$Button2.add_Click{
+$Form                            = New-Object system.Windows.Forms.Form
+$Form.ClientSize                 = '400,400'
+$Form.text                       = "Form"
+$Form.TopMost                    = $false
+
+$Label1                          = New-Object system.Windows.Forms.Label
+$Label1.text                     = "Material: "
+$Label1.AutoSize                 = $true
+$Label1.width                    = 25
+$Label1.height                   = 10
+$Label1.location                 = New-Object System.Drawing.Point(129,106)
+$Label1.Font                     = 'Microsoft Sans Serif,10'
+
+$Label2                          = New-Object system.Windows.Forms.Label
+$Label2.text                     = "Corte entallado"
+$Label2.AutoSize                 = $true
+$Label2.width                    = 25
+$Label2.height                   = 10
+$Label2.location                 = New-Object System.Drawing.Point(125,134)
+$Label2.Font                     = 'Microsoft Sans Serif,10'
+
+$Label3                          = New-Object system.Windows.Forms.Label
+$Label3.text                     = "    Ligera"
+$Label3.AutoSize                 = $true
+$Label3.width                    = 25
+$Label3.height                   = 10
+$Label3.location                 = New-Object System.Drawing.Point(127,163)
+$Label3.Font                     = 'Microsoft Sans Serif,10'
+
+$Label4                          = New-Object system.Windows.Forms.Label
+$Label4.text                     = "Algondón 100%"
+$Label4.AutoSize                 = $true
+$Label4.width                    = 25
+$Label4.height                   = 10
+$Label4.location                 = New-Object System.Drawing.Point(127,194)
+$Label4.Font                     = 'Microsoft Sans Serif,10'
+
+$Label5                          = New-Object system.Windows.Forms.Label
+$Label5.text                     = "Sudaderas"
+$Label5.AutoSize                 = $true
+$Label5.width                    = 25
+$Label5.height                   = 10
+$Label5.location                 = New-Object System.Drawing.Point(142,50)
+$Label5.Font                     = 'Segoe Print,10,style=Bold,Underline'
+
+
+$PictureBox1                     = New-Object system.Windows.Forms.PictureBox
+$PictureBox1.width               = 200
+$PictureBox1.height              = 200
+$PictureBox1.location            = New-Object System.Drawing.Point(90,200)
+$PictureBox1.imageLocation       = "C:\Users\Coke\Desktop\fondos.png"
+$PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
+$Form.controls.AddRange(@($Label1,$Label2,$Label3,$Label4,$PictureBox1,$Button3,$Label5))
 $Form.ShowDialog()
 }
 
-#Boton numero 4#
-$Button3=New-Object System.Windows.Forms.Button
-$Button3.Size=New-Object System.Drawing.Size(70,25)
-$Button3.Text="Cerrar"
-$Button3.Location=New-Object System.Drawing.Size(100,100)
-$form.Controls.Add($Button3)
-$button3.add_Click{
- $form.Close()
-}
-
-
-#Formulario 2-Tienda#
-$Form2 = New-Object System.Windows.Forms.Form
-$Font = New-Object System.Drawing.Font("Segoe UI",12,[System.Drawing.FontStyle]::Italic)
-$Form2.Font = $Font
-$Label2 = New-Object System.Windows.Forms.Label
-$Label2.Text = "Tienda"
-$Label2.AutoSize = $True
-$Form2.Controls.Add($Label2)
-$Form2.Text = "Tienda"
-
-$ButtonTiendaCerrar=New-Object System.Windows.Forms.Button
-$ButtonTiendaCerrar.Size=New-Object System.Drawing.Size(70,25)
-$ButtonTiendaCerrar.Text="Cerrar"
-$ButtonTiendaCerrar.Location=New-Object System.Drawing.Size(100,100)
-$form2.Controls.Add($ButtonTiendaCerrar)
-$ButtonTiendaCerrar.add_Click{
+$Button3                         = New-Object system.Windows.Forms.Button
+$Button3.text                    = "Salir"
+$Button3.width                   = 60
+$Button3.height                  = 30
+$Button3.location                = New-Object System.Drawing.Point(297,305)
+$Button3.Font                    = 'Microsoft Sans Serif,10'
+$Button3.add_Click{
  $form2.Close()
 }
 
 
-#Boton numero 1 tienda#
+$PictureBox1                     = New-Object system.Windows.Forms.PictureBox
+$PictureBox1.width               = 200
+$PictureBox1.height              = 200
+$PictureBox1.location            = New-Object System.Drawing.Point(90,200)
+$PictureBox1.imageLocation       = "C:\Users\Coke\Desktop\fondos.png"
+$PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
+$Label1                          = New-Object system.Windows.Forms.Label
+$Label1.text                     = "OnFit Shop"
+$Label1.AutoSize                 = $true
+$Label1.width                    = 25
+$Label1.height                   = 10
+$Label1.location                 = New-Object System.Drawing.Point(160,50)
+$Label1.Font                     = 'Segoe Print,10,style=Bold,Underline'
 
-$ButtonTienda1=New-Object System.Windows.Forms.Button
-$ButtonTienda1.Size=New-Object System.Drawing.Size(100,25)
-$ButtonTienda1.Text="Camisetas"
-$ButtonTienda1.Location=New-Object System.Drawing.Size(10,50)
-$Form2.Controls.Add($ButtonTienda1)
-$buttonTienda1.add_Click{
-$Form = New-Object System.Windows.Forms.Form
-$ButtonTienda1Close=New-Object System.Windows.Forms.Button
-$ButtonTienda1Close.Size=New-Object System.Drawing.Size(100,25)
-$ButtonTienda1Close.Text="Cerrar"
-$ButtonTienda1Close.Location=New-Object System.Drawing.Size(100,50)
-$Label = New-Object System.Windows.Forms.Label
-$Label.Text = "Material: algondon 100%  Corte entallado  Ligera"
-$Label.AutoSize = $True
-$Form.Controls.Add($Label)
-$Form.Controls.Add($ButtonTienda1Close)
-$ButtonTienda1Close.add_Click{
+$Form2.controls.AddRange(@($Button1,$Button2,$Button3,$PictureBox1,$Label1))
+
+$Form2.ShowDialog()
+}
+
+$Button2                         = New-Object system.Windows.Forms.Button
+$Button2.text                    = "Rutinas"
+$Button2.width                   = 60
+$Button2.height                  = 30
+$Button2.location                = New-Object System.Drawing.Point(158,143)
+$Button2.Font                    = 'Microsoft Sans Serif,10'
+$button2.add_Click{
+$Form                            = New-Object system.Windows.Forms.Form
+$Form.ClientSize                 = '400,400'
+$Form.text                       = "Objetivo"
+$Form.TopMost                    = $false
+
+$TextBox1                        = New-Object system.Windows.Forms.TextBox
+$TextBox1.multiline              = $false
+$TextBox1.width                  = 100
+$TextBox1.height                 = 20
+$TextBox1.location               = New-Object System.Drawing.Point(137,135)
+$TextBox1.Font                   = 'Microsoft Sans Serif,10'
+
+$PictureBox1                     = New-Object system.Windows.Forms.PictureBox
+$PictureBox1.width               = 200
+$PictureBox1.height              = 200
+$PictureBox1.location            = New-Object System.Drawing.Point(90,200)
+$PictureBox1.imageLocation       = "C:\Users\Coke\Desktop\fondos.png"
+$PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
+$Label1                          = New-Object system.Windows.Forms.Label
+$Label1.text                     = "Rutinas"
+$Label1.AutoSize                 = $true
+$Label1.width                    = 25
+$Label1.height                   = 10
+$Label1.location                 = New-Object System.Drawing.Point(162,50)
+$Label1.Font                     = 'Segoe Print,10,style=Bold,Underline'
+
+$Label2                          = New-Object system.Windows.Forms.Label
+$Label2.text                     = "Objetivo personal"
+$Label2.AutoSize                 = $true
+$Label2.width                    = 25
+$Label2.height                   = 10
+$Label2.location                 = New-Object System.Drawing.Point(140,109)
+$Label2.Font                     = 'Microsoft Sans Serif,10'
+
+$Button1                         = New-Object system.Windows.Forms.Button
+$Button1.BackColor               = "#b72a2a"
+$Button1.text                    = "Enviar"
+$Button1.width                   = 60
+$Button1.height                  = 30
+$Button1.location                = New-Object System.Drawing.Point(150,170)
+$Button1.Font                    = 'Microsoft Sans Serif,10'
+$Button1.ForeColor               = ""
+$Button1.add_Click{
  $form.Close()
 }
+
+$Form.controls.AddRange(@($TextBox1,$PictureBox1,$Label1,$Label2,$Button1))
 $Form.ShowDialog()
 }
 
-
-
-#Boton numero 2 tienda#
-$ButtonTienda2=New-Object System.Windows.Forms.Button
-$ButtonTienda2.Size=New-Object System.Drawing.Size(100,25)
-$ButtonTienda2.Text="Sudaderas"
-$ButtonTienda2.Location=New-Object System.Drawing.Size(180,50)
-$Form2.Controls.Add($ButtonTienda2)
-$buttonTienda2.add_Click{
-$Form = New-Object System.Windows.Forms.Form
-$ButtonTienda1Close=New-Object System.Windows.Forms.Button
-$ButtonTienda1Close.Size=New-Object System.Drawing.Size(100,25)
-$ButtonTienda1Close.Text="Cerrar"
-$ButtonTienda1Close.Location=New-Object System.Drawing.Size(100,50)
-$Label = New-Object System.Windows.Forms.Label
-$Label.Text = "Material: algondon 100%  Corte entallado  Ligera"
-$Label.AutoSize = $True
-$Form.Controls.Add($Label)
-$Form.Controls.Add($ButtonTienda1Close)
-$ButtonTienda1Close.add_Click{
+$Button3                         = New-Object system.Windows.Forms.Button
+$Button3.text                    = "Salir"
+$Button3.width                   = 60
+$Button3.height                  = 30
+$Button3.location                = New-Object System.Drawing.Point(157,191)
+$Button3.Font                    = 'Microsoft Sans Serif,10'
+$Button3.add_Click{
  $form.Close()
 }
-$Form.ShowDialog()
-}
+
+$PictureBox1                     = New-Object system.Windows.Forms.PictureBox
+$PictureBox1.width               = 200
+$PictureBox1.height              = 200
+$PictureBox1.location            = New-Object System.Drawing.Point(90,200)
+$PictureBox1.imageLocation       = "C:\Users\Coke\Desktop\fondos.png"
+$PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
+$Form.controls.AddRange(@($Label1,$Button1,$Button2,$Button3,$PictureBox1))
 
 $Form.ShowDialog()
