@@ -1,0 +1,105 @@
+Start-Sleep -Seconds 2
+
+$MouseEventSig=@'
+[DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
+public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+'@
+ 
+$MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
+
+[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(673,280)
+$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
+$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
+
+Start-Sleep -Seconds 2
+
+$MouseEventSig=@'
+[DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
+public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+'@
+ 
+$MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
+
+[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(611,321)
+$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
+$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
+
+Start-Sleep -Seconds 2
+
+$MouseEventSig=@'
+[DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
+public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+'@
+ 
+$MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
+
+[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(810,480)
+$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
+$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
+
+Start-Sleep -Seconds 2
+
+$MouseEventSig=@'
+[DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
+public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+'@
+ 
+$MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
+
+[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(810,480)
+$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
+$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
+
+Start-Sleep -Seconds 2
+
+$MouseEventSig=@'
+[DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
+public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+'@
+ 
+$MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
+
+[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(669,324)
+$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
+$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
+
+Start-Sleep -Seconds 2
+[System.Windows.Forms.SendKeys]::SendWait("V")
+Start-Sleep -Seconds 1
+[System.Windows.Forms.SendKeys]::SendWait("o")
+Start-Sleep -Seconds 1
+[System.Windows.Forms.SendKeys]::SendWait("l")
+Start-Sleep -Seconds 1
+[System.Windows.Forms.SendKeys]::SendWait("u")
+Start-Sleep -Seconds 1
+[System.Windows.Forms.SendKeys]::SendWait("m")
+Start-Sleep -Seconds 1
+[System.Windows.Forms.SendKeys]::SendWait("e")
+Start-Sleep -Seconds 1
+[System.Windows.Forms.SendKeys]::SendWait("n")
+
+Start-Sleep -Seconds 2
+
+$MouseEventSig=@'
+[DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
+public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+'@
+ 
+$MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
+
+[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(665,354)
+$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
+$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
+
+Start-Sleep -Seconds 2
+
+$MouseEventSig=@'
+[DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
+public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
+'@
+ 
+$MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
+
+[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(675,374)
+$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
+$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
