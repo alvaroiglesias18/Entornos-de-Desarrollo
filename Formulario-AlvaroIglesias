@@ -11,6 +11,7 @@ $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = '400,400'
 $Form.text                       = "Form"
 $Form.TopMost                    = $false
+$Form.StartPosition              ='CenterScreen'
 
 $Label1                          = New-Object system.Windows.Forms.Label
 $Label1.text                     = "Nuestra Página"
@@ -32,6 +33,7 @@ $Form2                            = New-Object system.Windows.Forms.Form
 $Form2.ClientSize                 = '400,400'
 $Form2.text                       = "Form"
 $Form2.TopMost                    = $false
+$Form2.StartPosition              ='CenterScreen'
 
 $Button1                         = New-Object system.Windows.Forms.Button
 $Button1.text                    = "Camisetas"
@@ -44,6 +46,7 @@ $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = '400,400'
 $Form.text                       = "Form"
 $Form.TopMost                    = $false
+$Form.StartPosition              ='CenterScreen'
 
 $Label1                          = New-Object system.Windows.Forms.Label
 $Label1.text                     = "Material: "
@@ -116,6 +119,7 @@ $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = '400,400'
 $Form.text                       = "Form"
 $Form.TopMost                    = $false
+$Form.StartPosition              ='CenterScreen'
 
 $Label1                          = New-Object system.Windows.Forms.Label
 $Label1.text                     = "Material: "
@@ -209,6 +213,7 @@ $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = '400,400'
 $Form.text                       = "Objetivo"
 $Form.TopMost                    = $false
+$Form.StartPosition              ='CenterScreen'
 
 $TextBox1                        = New-Object system.Windows.Forms.TextBox
 $TextBox1.multiline              = $false
@@ -274,3 +279,6 @@ $PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zo
 $Form.controls.AddRange(@($Label1,$Button1,$Button2,$Button3,$PictureBox1))
 
 $Form.ShowDialog()
+
+
+
